@@ -1,4 +1,4 @@
-FROM openjdk:17-slim
-COPY ./target/classes /app
-WORKDIR /app
-ENTRYPOINT ["java", "-cp", ".", "com.napier.sem.App"]
+FROM openjdk:latest
+COPY ./target/seMethods-1.0-SNAPSHOT-jar-with-dependencies.jar /tmp
+WORKDIR /tmp
+ENTRYPOINT ["java", "-jar", "seMethods-1.0-SNAPSHOT-jar-with-dependencies.jar"]
